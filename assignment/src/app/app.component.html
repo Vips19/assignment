@@ -1,0 +1,34 @@
+<div class="container">
+  <div>
+    <input type="text" name="startPoint" [(ngModel)]="start" />
+    <input type="text" name="endPoint" [(ngModel)]="end" />
+    <button type="submit" (click)= "addRoute()">Add Route</button>    
+  </div>
+  <div>
+    <span *ngFor="let r of route; let i = index" class="routeContainer" [ngStyle]="{'top': r.level === '2' ? '0px' : '50px'  }">
+      <span *ngIf="route.length>1 && i!=0" >
+        <span *ngIf="r.link === 'straight'">
+          <img class="routeLink" src="assets/images/straightline.jpg" />
+        </span>  
+        <span *ngIf="r.link === 'arrow'">
+          <img class="routeLink" src="assets/images/arrow.gif" />
+        </span>
+        <span *ngIf="r.link === 'curve1'">
+          <img class="curveLink1"  src="assets/images/curve1.png" />
+        </span>
+        <span *ngIf="r.link === 'curve2'">
+          <img class="curveLink2" src="assets/images/curve2.png" />
+        </span>
+      </span> 
+      <span  style="font-size: 40px; ">
+        &bull;
+      </span>
+      <span class="routeName">
+        {{r.code}}
+      </span>
+      
+    </span>  
+  </div>
+  
+  
+</div>

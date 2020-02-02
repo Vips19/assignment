@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    .routeContainer {
+        padding-left: 20px;
+        position: relative;
+        top: 50px;
+    }
+    .routeLink {
+        width: 80px;
+        padding-right: 30px;
+    }
+    .curveLink1 {
+        position: relative;
+        top: 50px;
+        padding-right: 25px;
+    }
+    .curveLink2 {
+        height: 60px;
+        padding-right: 25px;
+    }
+    .routeName {
+        position: relative;
+        left: -40px; 
+        top: 15px;
+    }
+}
